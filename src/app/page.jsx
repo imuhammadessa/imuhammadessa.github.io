@@ -5,13 +5,24 @@ import Link from 'next/link'
 
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons'
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  XIcon,
+} from '@/components/SocialIcons'
 import Kpitb from '@/images/logos/Kpitb.svg'
 import Kpyouth from '@/images/logos/Kpyouth.svg'
 import Eduonix from '@/images/logos/eduonix.svg'
 import InternsPakistan from '@/images/logos/InternsPakistan.svg'
 import TheMentorsPakistan from '@/images/logos/thementorspakistan.svg'
 import TechMentors from '@/images/logos/techmentors.svg'
+import SadatTransport from '@/images/logos/SadatTransport.svg'
+import PureCodes from '@/images/logos/PureCodes.svg'
+import McKinseyCompany from '@/images/logos/McKinseyCompany.svg'
+import DPD from '@/images/logos/DPD.png'
+import OEC from '@/images/logos/OEC.png'
+import CYBERVISION from '@/images/logos/cybervision.png'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -164,26 +175,44 @@ function Certificate({ certificate }) {
 function Certificates() {
   let certificates = [
     {
-      company: 'React.js Development',
-      title: 'TECH MENTORS',
+      company: 'McKinsey & Company',
+      title: 'Professional Career Growth',
+      logo: McKinseyCompany,
+      start: '2026',
+    },
+    {
+      company: 'Directorate of Professional Development',
+      title: 'Certificate in Human/Educational Psychology',
+      logo: DPD,
+      start: '2026',
+    },
+    {
+      company: 'Overseas Employment Corporation',
+      title: 'Certificate in Soft Skills Development',
+      logo: OEC,
+      start: '2025',
+    },
+    {
+      company: 'Tech Mentors, Pakistan',
+      title: 'Web Applications Developer Associate',
       logo: TechMentors,
       start: '2024',
     },
     {
-      company: 'Software Testing',
-      title: 'EDUONIX',
+      company: 'Eduonix Learning Solutions Institute',
+      title: 'Certificate in Software Testing',
       logo: Eduonix,
       start: '2022',
     },
     {
-      company: 'NodeJS Development',
-      title: 'KPITB',
-      logo: Kpitb,
+      company: 'Cyber Vision International',
+      title: 'Certificate in NodeJS development',
+      logo: CYBERVISION,
       start: '2021',
     },
     {
-      company: 'WordPress Development',
-      title: 'KPYOUTH',
+      company: 'Khyber Pakhtunkhwa Youth | KPYOUTH',
+      title: 'WordPress Development',
       logo: Kpyouth,
       start: '2018',
     },
@@ -193,7 +222,7 @@ function Certificates() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <CertificationsIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Certifications</span>
+        <span className="ml-3">Professional Certifications</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {certificates.map((certificate, index) => (
@@ -207,35 +236,56 @@ function Certificates() {
 function Resume() {
   let resume = [
     {
-      company: 'Tech Mentors',
-      title: 'Front-end Developer',
-      logo: TechMentors,
-      start: '2022',
+      company: 'PureCodes Software Solutions',
+      title: 'Full-Stack Developer',
+      logo: PureCodes,
+      start: '2026',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'KPITB',
+      company: 'Tech Mentors, Pakistan',
+      title: 'Full-Stack Developer',
+      logo: TechMentors,
+      start: '2023',
+      end: '2026',
+    },
+    {
+      company: 'KP Information Technology Board',
       title: 'Web Developer',
       logo: Kpitb,
       start: '2021',
-      end: '2022',
+      end: '2021',
     },
     {
       company: 'Interns Pakistan',
       title: 'Front-end Developer',
       logo: InternsPakistan,
       start: '2020',
-      end: '2021',
+      end: '2020',
     },
     {
-      company: 'The Mentors, Pakistan',
+      company: 'Sadat General Transport',
+      title: 'WordPress Developer',
+      logo: SadatTransport,
+      start: '2018',
+      end: '2020',
+    },
+    {
+      company: 'KP Information Technology Board',
+      title: 'WordPress Developer',
+      logo: Kpitb,
+      start: '2017',
+      end: '2018',
+    },
+    {
+      company: 'Tech Mentors, Pakistan',
       title: 'Web Developer',
       logo: TheMentorsPakistan,
       start: '2017',
-      end: '2020',
+      end: '2017',
     },
   ]
 
@@ -244,7 +294,7 @@ function Resume() {
       <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
         <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <BriefcaseIcon className="h-6 w-6 flex-none" />
-          <span className="ml-3">Work experiences</span>
+          <span className="ml-3">Work Experiences</span>
         </h2>
         <ol className="mt-6 space-y-4">
           {resume.map((role, index) => (
@@ -272,13 +322,14 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hi there, I'm Muhammad
+            Hi, there. I'm Muhammad
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m a front-end developer from Pakistan. I love learning how to
-            build fast, accessible and scalable web applications. I always keep
-            an eye on the JavaScript ecosystem for what comes next and I'm
-            excited to continue.
+            I’m a full-stack developer from Pakistan, specializing in AI-powered
+            PHP and TypeScript development. I love turning ideas into fast,
+            accessible, and scalable web experiences. I’m always exploring the
+            evolving tech ecosystem, experimenting with what’s next, and
+            building things that push the web forward.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -287,7 +338,7 @@ export default async function Home() {
               icon={LinkedInIcon}
             />
             <SocialLink
-              href="https://github.com/iMuhammadessa"
+              href="https://github.com/imuhammadessa"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
@@ -295,6 +346,11 @@ export default async function Home() {
               href="https://twitter.com/imuhammadessa"
               aria-label="Follow on X"
               icon={XIcon}
+            />
+            <SocialLink
+              href="https://instagram.com/imuhammadessa"
+              aria-label="Follow on Instagram"
+              icon={InstagramIcon}
             />
           </div>
         </div>
